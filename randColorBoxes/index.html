@@ -1,0 +1,103 @@
+<html>
+<head>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<title>Test</title>
+<style>
+.box {
+  height: 100px;
+ width: 100px;
+ border: 1px solid black;
+ display: inline-block;
+}
+
+</style>
+</head>
+<body>
+  <h1>Good Times In Vegas</h1>
+<div class="container">
+
+<div class="page-header">
+<h2>Slots!! Slots!! Slots!! Slots!!</h2>
+</div>
+
+<div id="leftBox" class="box">
+
+</div>
+<div id="middleBox" class="box">
+
+</div>
+
+<div id="rightBox" class="box">
+
+</div>
+
+</div>
+<div class="container">
+
+</div>
+<div id="bottomLeft" class="box">
+
+</div>
+</div>
+
+<div id="bottomMiddle" class="box">
+
+</div>
+
+</div>
+
+<div id="bottomRight" class="box">
+
+</div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+     <button onclick="setBoxColors()" id="colorButton" type="button">Set Colors</button>
+  </div>
+</div>
+
+</div>
+<script>
+
+
+
+var leftBox = document.getElementById('leftBox');
+var middleBox = document.getElementById('middleBox');
+var rightBox = document.getElementById('rightBox');
+var bottomLeft = document.getElementById('bottomLeft');
+var bottomMiddle = document.getElementById('bottomMiddle');
+var bottomRight = document.getElementById('bottomRight');
+ //document.getElementById("colorButton").onclick = setBoxColors();
+//functions
+ function setBoxColors() {
+   leftBox.style.backgroundColor = getRandomColor();
+   middleBox.style.backgroundColor = getRandomColor();
+   rightBox.style.backgroundColor = getRandomColor();
+   bottomLeft.style.backgroundColor = getRandomColor();
+   bottomMiddle.style.backgroundColor = getRandomColor();
+   bottomRight.style.backgroundColor= getRandomColor();
+ }
+
+ function getRandomColor() {
+    var colorArr = ["red", "green", "blue", "brown", "black"];
+    var luckyColor = "cyan";
+    var rand = Math.floor(Math.random()*5);
+
+    for(i = 0; i < colorArr.length; i++) {
+        if(i === rand) {
+          luckyColor = colorArr[i];
+          return luckyColor;
+        }
+    }
+    return;
+ }
+
+
+
+
+</script>
+
+</body>
+</html>
